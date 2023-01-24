@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 
-from app.app import calc
+import calc
 
 
 class CalcTests(SimpleTestCase):
