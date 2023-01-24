@@ -36,7 +36,7 @@ class AdminSiteTests(TestCase):
 
     def test_create_user(self):
         """test create user page works"""
-        url = reverse('admin:core_user_add', args=[self.user.id])
+        url = reverse('admin:core_user_add')
         res = self.client.get(url)
         self.assertEqual(res.status_code, 200)
 

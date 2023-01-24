@@ -9,7 +9,17 @@ class UserAdmin(BaseUserAdmin):
     list_display = ['email', 'name']
     fieldsets = (
         (None, {'fields': ('email', 'password',)}),
-        (_('Permissions'), {'fields': ('is_active', 'is_superuser', 'is_staff',)}),
+        (_('Personal Info'), {'fields': ('name',)}),
+        (
+            _('Permissions'),
+            {
+                'fields': (
+                    'is_active',
+                    'is_superuser',
+                    'is_staff',
+                )
+            }
+        ),
         (_('Important dates'), {'fields': ('last_login', )}),
     )
     readonly_fields = ['last_login']
@@ -25,7 +35,7 @@ class UserAdmin(BaseUserAdmin):
                 'is_staff',
                 'is_superuser'
             ),
-        })
+        }),
     )
 
 
