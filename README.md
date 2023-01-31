@@ -1,6 +1,54 @@
 # recipe-app-api
 Recipe api project.
 
+# Local environment
+## Running Docker Service
+
+Note: Ensure you create an `.env` file before starting the service. You can copy content of `.env.sample`
+
+### Running Service
+
+To start the service, run:
+
+```sh
+docker-compose up
+```
+
+### Stopping Service
+
+To stop the service, run:
+
+```sh
+docker-compose down
+```
+
+To stop service and **remove all data**, run:
+
+```sh
+docker-compose down --volumes
+```
+
+
+### Viewing Logs
+
+To view container logs, run:
+
+```sh
+docker-compose logs
+```
+
+### Running tests
+To run tests, run:
+```sh
+docker-compose run --rm app sh -c "python manage.py test"
+```
+
+
+### Migrations
+To make migrations, run:
+```sh
+docker-compose run --rm app sh -c "python manage.py makemigrations"
+```
 
 # Deployment
 
