@@ -1,5 +1,5 @@
 # recipe-app-api
-Recipe api project.
+Udemy Course: Build a Backend REST API with Python & Django - Advanced [Recipe api project]
 
 # Local environment
 ## Running Docker Service
